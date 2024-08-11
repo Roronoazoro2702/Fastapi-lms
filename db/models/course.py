@@ -1,4 +1,3 @@
-from datetime import datetime
 import enum
 
 from sqlalchemy import Enum, Column, ForeignKey, Integer, String, Text, Boolean
@@ -60,6 +59,7 @@ class StudentCourse(Timestamp, Base):
     """
     Students can be assigned to courses.
     """
+
     __tablename__ = "student_courses"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -75,6 +75,7 @@ class CompletedContentBlock(Timestamp, Base):
     """
     This shows when a student has completed a content block.
     """
+
     __tablename__ = "completed_content_blocks"
 
     id = Column(Integer, primary_key=True, index=True)

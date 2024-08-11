@@ -8,8 +8,7 @@ class UserBase(BaseModel):
     role: int
 
 
-class UserCreate(UserBase):
-    ...
+class UserCreate(UserBase): ...
 
 
 class User(UserBase):
@@ -21,6 +20,7 @@ class User(UserBase):
     class Config:
         from datetime import datetime
 
+
 from pydantic import BaseModel
 
 
@@ -29,8 +29,7 @@ class UserBase(BaseModel):
     role: int
 
 
-class UserCreate(UserBase):
-    ...
+class UserCreate(UserBase): ...
 
 
 class User(UserBase):

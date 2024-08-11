@@ -23,8 +23,7 @@ class User(Timestamp, Base):
 
     profile = relationship("Profile", back_populates="owner", uselist=False)
     student_courses = relationship("StudentCourse", back_populates="student")
-    student_content_blocks = relationship(
-        "CompletedContentBlock", back_populates="student")
+    student_content_blocks = relationship("CompletedContentBlock", back_populates="student")
 
 
 class Profile(Timestamp, Base):
@@ -37,4 +36,3 @@ class Profile(Timestamp, Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     owner = relationship("User", back_populates="profile")
-    

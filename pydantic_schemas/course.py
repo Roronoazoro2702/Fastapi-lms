@@ -9,12 +9,11 @@ class CourseBase(BaseModel):
     user_id: int
 
 
-class CourseCreate(CourseBase):
-    ...
+class CourseCreate(CourseBase): ...
 
 
 class Course(CourseBase):
     id: int
 
     class Config:
-       from_attributes = True
+        from_attributes = True
